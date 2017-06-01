@@ -1,0 +1,89 @@
+//Variables
+$primary-color: #000;
+$accent-color: #99cc00;
+$text-color: #fff;
+
+//Mixins
+
+//Most Used Classes
+
+    //Display Classes
+    .display-block{
+      display: block;
+    }
+    .display-flex{
+      display: flex;
+      &.display-flex--row{
+        flex-direction: row;
+        &.flex-dir-reverse{
+          flex-direction: row-reverse;
+        }
+      }
+      &.display-flex--column{
+        flex-direction: column;
+        &.flex-dir-reverse{
+          flex-direction: column-reverse;
+        }
+      }
+    }
+    .flex-grow{
+      &--1 {
+        flex-grow: 1;
+      }
+    }
+
+    //Position Classes
+    .pos-rel{
+      position: relative;
+    }
+    .pos-absolute{
+      position: absolute;
+      &.top-left-0{
+        top: 0;
+        left: 0;
+      }
+    }
+    .pos-fixed{
+      position: fixed;
+    }
+
+    //Colour Classes
+    .colour-primary{
+      color: $primary-color;
+    }
+    .colour-accent{
+      color: $accent-color;
+    }
+    .text-colour--default{
+      color: $text-color;
+    }
+
+    //Sizing Classes
+    .height--100{
+      height: 100%;
+    }
+    .width--100{
+      width: 100%;
+    }
+
+//Project Specific Classes
+.fixed-header{
+  height: 75px;
+  background: $primary-color;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  width: calc(100% - 40px);
+  a.header-logo-link{
+    left: 1.5vw;
+    top: 6vh;
+  }
+  ul.header-menu-list{
+    justify-content: center;
+    align-items: center;
+    .menu-item{
+      margin: 0 2vw;
+    }
+  }
+}
+

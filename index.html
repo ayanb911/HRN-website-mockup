@@ -6,9 +6,9 @@
 </head>
 <body>
 <!--Fixed Header-->
-<div id="fixedHeader" class="fixed-header has-menu">
+<div id="fixedHeader" class="fixed-header display-flex display-flex--row pos-fixed has-menu">
 <!--Logo-->
-<a href="" class="header-logo-link">
+<a href="" class="header-logo-link pos-fixed">
     <div id="headerLogo">
         <img src="assets/images/menu-logo-2.svg">
     </div>
@@ -17,8 +17,8 @@
 <!--Nav Links-->
 
 <!--DESKTOP-->
-<nav id="desktopMenuLinks">
-    <ul id="MenuList">
+<nav id="desktopMenu" class="flex-grow--1 display-block height--100">
+    <ul id="MenuList" class="header-menu-list display-flex display-flex--row height--100">
         <li class="menu-item">
             <a href="" class="text-upper" title="About">About</a>
         </li>
@@ -35,7 +35,7 @@
             <a href="" class="text-upper" title="Careers">Careers</a>
         </li>
         <li class="menu-item">
-            <a href="" class="text-upper colour-primary" title="More">More</a>
+            <a href="" class="text-upper colour-accent" title="More">More</a>
         </li>
         <li class="menu-item is-button">
             <button class="btn-primary">Get Tickets!</button>
