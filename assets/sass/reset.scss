@@ -1,6 +1,7 @@
 body{
-  font-family: arial;
-  background: #f8f9fb
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
 }
 html, body, ul, ol, li, form, fieldset, legend
 {
@@ -10,6 +11,9 @@ html, body, ul, ol, li, form, fieldset, legend
 
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
+}
+a{
+  text-decoration: none;
 }
 fieldset,img {
   border: 0;
