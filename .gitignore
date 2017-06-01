@@ -1,0 +1,22 @@
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+
+# Ignore node_module
+node_modules
+.idea
+npm-debug.log
+sites/all/themes/expertnet_end_user_theme/assets/css/global.css
+.idea/*
+sso-config.php
+sso-config.php
+admin.css
+frontend.css
+mycustom.css
+drupal-commerce-custom.css
+zotezo_style.css
+*.coder.orig
+.DS_Store
