@@ -523,6 +523,22 @@ section#futureOfWork{
             }
           }
         }
+        &:hover > .work-icon--title{
+          transform: translate3d(0,0,0) scale3d(1,1,1);
+          &:after{
+            content: "";
+            position: absolute;
+            bottom: -2.2vw;
+            left: 6vw;
+            border: 16px;
+            border-style: solid;
+            border-color: transparent;
+            border-top-color: rgba(0,0,0,0.07);
+            height:0;
+            width: 0;
+            background: transparent;
+          }
+        }
       }
     }
   }
