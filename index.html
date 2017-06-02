@@ -2,14 +2,14 @@
 <html>
 <head>
     <!--font-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,900" rel="stylesheet">
     <!--stylesheets-->
     <link href="assets/css/reset.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 <!--Fixed Header-->
-<div id="fixedHeader" class="fixed-header display-flex display-flex--row pos-fixed has-menu">
+<div id="fixedHeader" class="fixed-header display-flex display-flex--row pos-fixed has-menu top-left-0">
 <!--Logo-->
 <a href="" class="header-logo-link pos-fixed">
     <div id="headerLogo">
@@ -50,6 +50,67 @@
 <!--Nav Links END-->
 </div>
 <!--Fixed Header END-->
+<!--Header Banner-->
+<header id="headerBanner" class="page-header">
+    <!--Header Elements Wrapper-->
+    <div id="headerElements" class="header-el-wrapper text-center display-flex display-flex--column height--100">
+        <!--Header banner Top Text-->
+        <h1 id="headerTopBanner" class="header-top-banner is-white">
+            <span id="The">The</span>
+            <span id="Greatest">Greatest</span>
+            <span id="hrShows">HR Shows on Earth</span>
+        </h1>
+        <!--Header banner Top Text END-->
+        <!--Header banner Bottom Wrapper-->
+        <div id="headerBottomBanner" class="header-bottom-banner is-white layout-m-b--3">
+            <h1 class="headerBottomTitle text-upper">Unleash your people!</h1>
+            <div class="display-flex display-flex--row header-buttons margin-center">
+                <button id="headerButtonRequest" class="btn-primary--reverse text-upper">
+                    Request Agenda
+                </button>
+                <button id="headerButtonTickets" class="btn-primary text-upper">
+                    Apply Now
+                </button>
+            </div>
+            <!--Header Sponsors Banner-->
+            <div id="headerSponsors" class="is-white display-flex display-flex--row width--100">
+                <div class="feature-keynote-wrapper flex-grow--1">
+                    <div class="keynote-title">Featuring Keynote</div>
+                    <div class="keynote-person">Karren Brady</div>
+                </div>
+                <div id="sponsorList" class="display-flex display-flex--row">
+                    <a href="#" target="_blank" title="Avature">
+                        <img src="assets/images/avature.svg" alt="Avature">
+                    </a>
+                    <a href="#" target="_blank" title="Benify">
+                        <img src="assets/images/benify.svg" alt="Benify">
+                    </a>
+                    <a href="#" target="_blank" title="Cornerstone">
+                        <img src="assets/images/cornerstone.svg" alt="Cornerstone">
+                    </a>
+                    <a href="#" target="_blank" title="IBM">
+                        <img src="assets/images/ibm.png" alt="IBM">
+                    </a>
+                    <a href="#" target="_blank" title="Oracle">
+                        <img src="assets/images/oracle.png" alt="Oracle">
+                    </a>
+                    <a href="#" target="_blank" title="SAP SuccessFactors">
+                        <img src="assets/images/successfactors.svg" alt="SAP SuccessFactors">
+                    </a>
+                </div>
+                <div class="feature-keynote-wrapper flex-grow--1">
+                    <div class="keynote-title">Featuring Keynote</div>
+                    <div class="keynote-person">Sir Ken Robinson</div>
+                </div>
+            </div>
+            <!--Header Sponsors Banner END-->
+        </div>
+        <!--Header banner Bottom Wrapper END-->
+
+    </div>
+    <!--Header Elements Wrapper END-->
+</header>
+<!--Header Banner END-->
 <script src="assets/js/script.js"></script>
 </body>
 </html>

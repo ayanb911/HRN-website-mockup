@@ -1,3 +1,7 @@
+//Imports
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
+
+
 //Variables
 $primary-color: #000;
 $accent-color: #99cc00;
@@ -40,13 +44,16 @@ $black: #000;
 }
 .pos-absolute{
   position: absolute;
-  &.top-left-0{
-    top: 0;
-    left: 0;
-  }
 }
 .pos-fixed{
   position: fixed;
+}
+.top-left-0{
+  top: 0;
+  left: 0;
+}
+.margin-center{
+  margin: 0 auto;
 }
 
 //Colour Classes
@@ -70,6 +77,9 @@ $black: #000;
 .text-upper{
   text-transform: uppercase;
 }
+.text-center{
+  text-align: center;
+}
 
 //Sizing Classes
 .height--100{
@@ -79,8 +89,162 @@ $black: #000;
   width: 100%;
 }
 
+//Layout Classes
+.layout-m{
+  &-t{
+    &--1{
+      margin-top: 8px;
+    }
+    &--2{
+      margin-top: 16px;
+    }
+    &--3{
+      margin-top: 32px;
+    }
+    &--4{
+      margin-top: 64px;
+    }
+  }
+  &-b{
+    &--1{
+      margin-bottom: 8px;
+    }
+    &--2{
+      margin-bottom: 16px;
+    }
+    &--3{
+      margin-bottom: 32px;
+    }
+    &--4{
+      margin-bottom: 64px;
+    }
+  }
+  &-r{
+    &--1{
+      margin-right: 8px;
+    }
+    &--2{
+      margin-right: 16px;
+    }
+    &--3{
+      margin-right: 32px;
+    }
+    &--4{
+      margin-right: 64px;
+    }
+  }
+  &-l{
+    &--1{
+      margin-left: 8px;
+    }
+    &--2{
+      margin-left: 16px;
+    }
+    &--3{
+      margin-left: 32px;
+    }
+    &--4{
+      margin-left: 64px;
+    }
+  }
+}
+
+.layout-p{
+  &-t{
+    &--1{
+      padding-top: 8px;
+    }
+    &--2{
+      padding-top: 16px;
+    }
+    &--3{
+      padding-top: 32px;
+    }
+    &--4{
+      padding-top: 64px;
+    }
+  }
+  &-b{
+    &--1{
+      padding-bottom: 8px;
+    }
+    &--2{
+      padding-bottom: 16px;
+    }
+    &--3{
+      padding-bottom: 32px;
+    }
+    &--4{
+      padding-bottom: 64px;
+    }
+  }
+  &-r{
+    &--1{
+      padding-right: 8px;
+    }
+    &--2{
+      padding-right: 16px;
+    }
+    &--3{
+      padding-right: 32px;
+    }
+    &--4{
+      padding-right: 64px;
+    }
+  }
+  &-l{
+    &--1{
+      padding-left: 8px;
+    }
+    &--2{
+      padding-left: 16px;
+    }
+    &--3{
+      padding-left: 32px;
+    }
+    &--4{
+      padding-left: 64px;
+    }
+  }
+}
+
+//Project Specific Button styles
+.btn-primary{
+  height: 40px;
+  background: $accent-color;
+  width: 200px;
+  font-size: 14px;
+  border: 1px solid $accent-color;
+  transition: 0.3s ease;
+  outline: none;
+  color: $white;
+  &:hover{
+    color: $accent-color;
+    background: $white;
+    cursor: pointer;
+  }
+}
+.btn-primary--reverse{
+  height: 40px;
+  background: $white;
+  width: 200px;
+  font-size: 14px;
+  border: 1px solid $accent-color;
+  transition: 0.3s ease;
+  outline: none;
+  color: $accent-color;
+  &:hover{
+    color: $white;
+    background: $accent-color;
+    cursor: pointer;
+  }
+}
+
 ////Project Specific Classes////
 
+body{
+  padding-top: 75px; //for fixed header
+}
 
 .fixed-header{
   height: 75px;
@@ -100,27 +264,81 @@ $black: #000;
     li.menu-item{
       margin: 0 1vw;
       font-size: 14px;
-      &.is-button{
-        .btn-primary{
-          height: 40px;
-          background: $accent-color;
-          width: 200px;
-          font-size: 14px;
-          border: 1px solid $accent-color;
-          transition: 0.3s ease;
-          outline: none;
-          &:hover{
-            color: $accent-color;
-            background: $white;
-            cursor: pointer;
-          }
-        }
-      }
       &:hover a{
         transition: 0.3s ease;
         color: $accent-color;
       }
     }
   }
-}
+}//fixed header END
+
+
+header#headerBanner{
+  background: url("../images/header-bg-desktop.jpg") center center no-repeat;
+  background-size: cover;
+  height: 47.4vw;
+  #headerElements{
+    justify-content: space-between;
+    .header-top-banner{
+      font-family: 'Playfair Display', serif;
+      position: relative;
+      bottom: -7vw;
+      font-weight: 400;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      span{
+        font-size: 2.1vw;
+        position: relative;
+        &#The{
+          bottom: -2.5vw;
+          left: -5.4vw;
+        }
+        &#Greatest{
+          font-size: 6vw;
+        }
+        &#hrShows{
+          top: -1.6vw;
+          right: -2.4vw;
+        }
+      }
+    }//header-top-banner END
+    .header-bottom-banner{
+      .headerBottomTitle{
+        margin-bottom: 12px;
+        font-size: 32px;
+        font-weight: 900;
+        letter-spacing: 1px;
+      }
+      .header-buttons {
+        max-width: 430px;
+        justify-content: space-between;
+      }
+      #headerSponsors{
+        justify-content: space-around;
+        margin: 2vw 0;
+        .feature-keynote-wrapper{
+          .keynote-title{
+            font-size: 18px;
+          }
+          .keynote-person{
+            font-size: 28px;
+            font-weight: 900;
+          }
+        }
+        #sponsorList{
+          justify-content: space-between;
+          align-items: flex-end;
+          img{
+            height: 1.5vw;
+            margin-right: 2vw;
+          }
+          a:last-child img{
+            margin-right: 0;
+          }
+        }
+      }
+    }//header-bottom-banner END
+  }//header-el-wrapper END
+}//header tag END
 

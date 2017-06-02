@@ -6,3 +6,7 @@ npm-debug.log
 
 #CSS files
 assets/css/*
+
+#Miscellaneous
+.DS_Store
+assets/.DS_Store

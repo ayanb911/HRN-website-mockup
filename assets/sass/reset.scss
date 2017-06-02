@@ -1,8 +1,12 @@
-body{
+*{
   box-sizing: border-box;
+}
+
+body{
   font-family: 'Roboto', sans-serif;
   background: #fff;
 }
+
 html, body, ul, ol, li, form, fieldset, legend
 {
   margin: 0;
