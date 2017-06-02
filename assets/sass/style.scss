@@ -538,12 +538,46 @@ section#futureOfWork{
         font-weight: 300;
         letter-spacing: 1px;
         line-height: 1.6vw;
-        color: #111;
       }
     }
     #sectionButtons{
       max-width: 60%;
       justify-content: space-between;
+    }
+  }
+}//section Future of Work END
+
+section#peopleAttending{
+  background: $black;
+  .section-wrapper{
+    max-width: 70vw;
+    #firstSection{
+      max-width: 70%;
+      #sectionFirstTitle{
+        font-size: 24px;
+        font-weight: 900;
+      }
+      .section-first-desc{
+        max-width: 82%;
+        font-size: 14px;
+        line-height: 1.4vw;
+        font-weight: 300;
+      }
+    }
+    #secondSection{
+      #attendeesList{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: $white;
+        &>div{
+          width: 198px;
+          margin-bottom: 4px;
+          &>img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
   }
 }
