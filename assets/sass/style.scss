@@ -254,6 +254,7 @@ body{
   padding: 0 20px;
   box-sizing: border-box;
   width: 100%;
+  z-index: 999;
   a.header-logo-link{
     left: 1.5vw;
     top: 2.5vh;
@@ -341,4 +342,188 @@ header#headerBanner{
     }//header-bottom-banner END
   }//header-el-wrapper END
 }//header tag END
+
+section#futureOfWork{
+  div.section-first{
+    div#iconsContainer{
+      max-width: 70vw;
+      justify-content: center;
+      .work-icon{
+        height:4vw;
+        width: 4vw;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .work-icon--title{
+          top: -3.5vw;
+          width: 200px;
+          background: rgba(0,0,0,0.07);
+          left: -5.1vw;
+          box-sizing: border-box;
+          font-size: 12px;
+          transition: all 0.3s ease;
+          transform:translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+        }
+        .work-icon--title.show{
+          transform: translate3d(0,0,0) scale3d(1,1,1);
+          &:after{
+            content: "";
+            position: absolute;
+            bottom: -2.2vw;
+            left: 6vw;
+            border: 16px;
+            border-style: solid;
+            border-color: transparent;
+            border-top-color: rgba(0,0,0,0.07);
+            height:0;
+            width: 0;
+            background: transparent;
+          }
+        }
+        .work-icon--img{
+          height: 30px;
+          width: 30px;
+          background-size: contain !important;
+          transition: 0.3s ease;
+        }
+        &#HomeIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/home.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/home.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#MainStageIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/mainstage.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/mainstage.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#HRIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/hrtech.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/hrtech.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#TalentIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/irecruitandtalent.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/irecruitandtalent.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#SmartDataIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/smartdata.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/smartdata.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#LearningIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/learning.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/learning.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#AdoptionIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/adoption.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/adoption.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#PayrollIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/hrssandpayroll.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/hrssandpayroll.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#RewardsIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/payandrewards.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/payandrewards.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#DigitalIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/digitalhr.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/digitalhr.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#DiversityIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/diversityandinclusion.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/diversityandinclusion.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#ThinkIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/thinktank.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/thinktank.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#ThinkIconII{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/thinktanktwo.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/thinktanktwo.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#disruptIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/disrupthr.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/disrupthr.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+        &#ProductIcon{
+          .work-icon--img {
+            background: url("../images/scale-icons/grey/productdemo.svg") center center no-repeat;
+            &.hovered, &:hover{
+              background: url("../images/scale-icons/colour/productdemo.svg") center center no-repeat;
+              transform: scale(1.8,1.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
