@@ -1,19 +1,25 @@
 $(document).ready(function () {
-    setTimeout(autoIconScale(), 14000);
+    setTimeout(autoIconScale, 14);
 })
 
 function autoIconScale(){
     console.log("icons");
-    var i = 1;
-    $(".work-icon").each(function (i) {
-        var workIcon = $(this),
-            notWorkIcon = $(".work-icon").not(workIcon);
-        console.log(i);
+    var workIcon = $(".work-icon");
+    workIcon.each(function (i) {
+        var workIconEach = $(this),
+            notWorkIcon = $(".work-icon").not(workIconEach);
         setTimeout(function () {
-            workIcon.find("div.work-icon--title").addClass("show");
-            workIcon.find("div.work-icon--img").addClass("hovered");
+            workIconEach.find("div.work-icon--title").addClass("show");
+            workIconEach.find("div.work-icon--img").addClass("hovered");
             notWorkIcon.find("div.work-icon--title").removeClass("show");
             notWorkIcon.find("div.work-icon--img").removeClass("hovered");
+            /*if(i === 14){
+                console.log(workIcon[14]);
+                workIconEach.find("div.work-icon--title").addClass("show");
+                workIconEach.find("div.work-icon--img").addClass("hovered");
+                setInterval(autoIconScale(), 00);
+            }*/
         }, 1000*i);
+
     });
 }
