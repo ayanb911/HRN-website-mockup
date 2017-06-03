@@ -218,10 +218,14 @@ $black: #000;
   transition: 0.3s ease;
   outline: none;
   color: $white;
+  cursor: pointer;
   &:hover{
     color: $accent-color;
     background: $white;
-    cursor: pointer;
+  }
+  &.btn-back-transparent:hover{
+    background: transparent;
+    color: $accent-color;
   }
 }
 .btn-primary--reverse{
@@ -585,12 +589,56 @@ section#peopleAttending{
         justify-content: space-between;
         flex-wrap: wrap;
         background: $white;
-        &>div{
-          width: 198px;
+        div.speaker{
+          flex: 0 1 13.8vw;
           margin-bottom: 4px;
-          &>img{
-            width: 100%;
-            height: 100%;
+          .speaker-img{
+
+          }
+          div.person-description{
+            left: 0;
+            bottom: 0;
+            text-align: left;
+            background: rgba(0,0,0,0.7);
+            font-size: 12px;
+            font-weight: 100;
+            padding: 8px;
+            padding-bottom: 2px;
+            line-height: 1.2vw;
+            .person-title{
+              font-size: 14px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+      #secondSectionFooter{
+        .section-footer-title{
+          font-weight: 400;
+          font-size: 30px;
+        }
+        .section-footer-desc{
+          max-width: 70%;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 1.7vw;
+        }
+        .know-more-section{
+          .know-more-title{
+            font-weight: 400;
+            font-size: 30px;
+          }
+          .know-more-form-wrapper{
+            max-width: 64%;
+            form.know-more-form{
+              justify-content: space-between;
+              input[type="text"] {
+                width: 200px;
+                padding: 4px 10px;
+                font-size: 14px;
+                outline: none;
+              }
+            }
           }
         }
       }

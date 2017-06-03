@@ -1,8 +1,9 @@
 $(document).ready(function () {
-    autoIconScale(); //work icon animation function call
+    autoIconScale(); //Icon animation - Future of Work
 })
 
-function autoIconScale(){ //future of work icon animation function
+//Icon animation - Future of Work
+function autoIconScale(){
     var workIcon = $(".work-icon");
     workIcon.each(function (i) {
         var workIconEach = $(this),
