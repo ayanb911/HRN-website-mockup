@@ -285,6 +285,9 @@ $black: #000;
 
 body{
   padding-top: 75px; //for fixed header
+  &.overflow-stop{
+    overflow: hidden;
+  }
 }
 
 .fixed-header{
