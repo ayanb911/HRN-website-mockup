@@ -1,5 +1,7 @@
 $(document).ready(function () {
     autoIconScale(); //Icon animation - Future of Work
+    hamToCross();
+    menuMore();
 })
 
 //Icon animation - Future of Work
@@ -17,15 +19,29 @@ function autoIconScale(){
             //remove classes from other elements
             notThis.find("div.work-icon--title").removeClass("show");
             notThis.find("div.work-icon--img").removeClass("hovered");
-
-            /*
-            Debugging Purpose
-            console.log("each i = ", i);
-            */
         }, 1000*i);
 
     });
     setTimeout(function () { //restart the function after completion of first setTimeout
         autoIconScale();
     }, 1000 * workIcon.length-1);
+}
+
+//Hamburger icon to cross animation
+function hamToCross(){
+    $("#hamburgerBtn").click(function () {
+        //toggle class to make it cross and for menu to slide in
+        $(this).toggleClass("isCross").parent().find("#mobileMenu").toggleClass("isOpen");
+    })
+}
+
+
+////Menu animations
+
+//Menu More
+function menuMore(){
+    $("#menuMore").click(function () {
+        //toggle class for translating ul menu
+        $(this).parent().closest("#menuWrapper").toggleClass("expand");
+    })
 }
