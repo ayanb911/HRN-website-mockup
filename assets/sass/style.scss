@@ -737,13 +737,83 @@ section#peopleAttending{
   }
 }//section Speakers END
 
+//MEDIA QUERIES
+
+@media screen and (min-width: 1440px){
+  .btn-primary--reverse{
+    max-width: 11vw;
+  }
+  .fixed-header {
+    a.header-logo-link{
+      top: 0.8vw;
+    }
+  }
+
+  header#headerBanner {
+    #headerElements {
+      .header-bottom-banner {
+        .headerBottomTitle{
+          font-size: 1.59vw;
+        }
+        #headerSponsors {
+          .feature-keynote-wrapper {
+            .keynote-title{
+              font-size: 1.4vw;
+            }
+            .keynote-person{
+              font-size: 2vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  section#futureOfWork {
+    div.section-second {
+      #iconInfo {
+        p#sectionDesc{
+          font-size: 1vw;
+        }
+      }
+    }
+  }
+  section#peopleAttending {
+    .section-wrapper {
+      #firstSection {
+        .section-first-desc{
+          font-size: 1vw;
+        }
+      }
+      #secondSection {
+        #attendeesList {
+          div.speaker {
+            div.person-description{
+              font-size: 0.7vw;
+              span{
+                &.person-title{
+                  font-size: 1vw;
+                }
+              }
+            }
+          }
+        }
+        #secondSectionFooter {
+          .section-footer-desc{
+            font-size: 1vw;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 959px){
   #sectionFirstPart{
     display: none;
   }
 }
 
-//FOR 1024px//
+//FOR 1024px screens//
 @media screen and (max-width: 1279px) {
 
   //hamburger-menu button
