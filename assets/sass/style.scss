@@ -10,6 +10,40 @@ $white: #fff;
 $black: #000;
 
 //Mixins
+//Function for returning the multiplied value
+@function  multiply($val1, $val2){
+  $result: 0;
+  @for $i from 1 through $val2{
+    $result: $result + (4*4);
+  }
+  @return $result+px;
+}
+
+//mixins for margin and padding classes
+@mixin marginClasses{
+  $directions: ("r": right, "l": left, "b": bottom, "t": top);
+  $level: 5;
+  $counter: 1;
+  @each $dir, $d in $directions{
+    @for $i from 1 through $level{
+      .layout-m-#{$dir}--#{$i}{
+        margin-#{$d}: multiply(4,$i);
+      }
+    }
+  }
+}
+@mixin paddingClasses{
+  $directions: ("r": right, "l": left, "b": bottom, "t": top);
+  $level: 5;
+  $counter: 1;
+  @each $dir, $d in $directions{
+    @for $i from 1 through $level{
+      .layout-p-#{$dir}--#{$i}{
+        padding-#{$d}: multiply(4,$i);
+      }
+    }
+  }
+}
 
 ////Most Used Classes////
 
@@ -96,6 +130,7 @@ $black: #000;
 }
 
 //Layout Classes
+/*
 .layout-m{
   &-t{
     &--1{
@@ -213,6 +248,9 @@ $black: #000;
     }
   }
 }
+*/
+@include marginClasses;
+@include paddingClasses;
 
 //Visibility Classes
 .hidden{
