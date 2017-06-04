@@ -954,4 +954,39 @@ section#peopleAttending{
       }
     }
   }
+  section#futureOfWork {
+    max-width: 100vw;
+    div.section-second {
+      #iconInfo {
+        #sectionTitle{
+          font-size: 32px;
+          font-weight:900;
+        }
+        #sectionDesc{
+          padding: 0 24px;
+        }
+      }
+    }
+  }
+
+  section#peopleAttending {
+    .section-wrapper {
+      #secondSection {
+        #attendeesList{
+          height: 416px;
+          overflow: hidden;
+          transition: height 0.3s ease;
+          &.isExpanded{
+            height: 696px;
+          }
+        }
+        #secondSectionFooter {
+          margin: 0 -64px;
+          .section-footer-desc{
+            line-height: 3vw;
+          }
+        }
+      }
+    }
+  }
 }

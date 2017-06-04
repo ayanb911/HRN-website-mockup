@@ -74,3 +74,9 @@ function menuAnimate(){
         }
     })
 }
+
+
+//Attendees animation
+$("#seeMore").click(function () {
+    $('#attendeesList').toggleClass("isExpanded");
+})
