@@ -29,7 +29,7 @@
     <!--Nav Links-->
 
     <!--DESKTOP-->
-    <nav id="desktopMenu" class="flex-grow--1 display-block height--100 hidden--lt-md">
+    <nav id="desktopMenu" class="flex-grow--1 display-block height--100 hidden--lt-md pos-rel">
         <ul id="MenuList" class="header-menu-list display-flex display-flex--row height--100">
             <li class="menu-item">
                 <a href="" class="text-upper is-white" title="About">About</a>
@@ -46,8 +46,18 @@
             <li class="menu-item">
                 <a href="" class="text-upper is-white" title="Careers">Careers</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item has-submenu pos-rel">
                 <a href="" class="text-upper colour-accent" title="More">More</a>
+                <div id="hoverMenu" class="pos-absolute top-left-0 hover-menu">
+                    <ul id="menuHoverContainer">
+                        <li><a href="#">Press Release</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Hrtech world<br><span class="menu-tag"><span style="color: #e80f42">san fransisco</span>  14-15 june 2017</span></a></li>
+                        <li><a href="#">Hrtech world<br><span class="menu-tag"><span style="color: #00a7e1" >amsterdam</span>  24-25 october 2017</span></a></li>
+                        <li><a href="#">Hrn Blog</a></li>
+                        <li><a href="#">hrn</a></li>
+                    </ul>
+                </div>
             </li>
             <li class="menu-item is-button">
                 <button class="btn-primary text-upper is-white">Get Tickets!</button>
