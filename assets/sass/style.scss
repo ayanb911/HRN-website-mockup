@@ -222,8 +222,18 @@ $black: #000;
       display: none;
     }
   }
+  &--gt-xl{
+    @media screen and (min-width: 3839px){
+      display: none;
+    }
+  }
   &--lt-lg{
     @media screen and (max-width: 1919px){
+      display: none;
+    }
+  }
+  &--gt-lg{
+    @media screen and (min-width: 1919px){
       display: none;
     }
   }
@@ -232,13 +242,28 @@ $black: #000;
       display: none;
     }
   }
+  &--gt-md{
+    @media screen and (min-width: 1279px){
+      display: none;
+    }
+  }
   &--lt-sm{
     @media screen and (max-width: 959px){
       display: none;
     }
   }
+  &--gt-sm{
+    @media screen and (min-width: 959px){
+      display: none;
+    }
+  }
   &--lt-xs{
     @media screen and (max-width: 319px){
+      display: none;
+    }
+  }
+  &--gt-xs{
+    @media screen and (min-width: 319px){
       display: none;
     }
   }
@@ -249,7 +274,7 @@ $black: #000;
 .btn-primary{
   height: 40px;
   background: $accent-color;
-  width: 200px;
+  min-width: 200px;
   font-size: 14px;
   border: 1px solid $accent-color;
   transition: 0.3s ease;
@@ -268,7 +293,7 @@ $black: #000;
 .btn-primary--reverse{
   height: 40px;
   background: $white;
-  width: 200px;
+  min-width: 200px;
   font-size: 14px;
   border: 1px solid $accent-color;
   transition: 0.3s ease;
@@ -284,7 +309,7 @@ $black: #000;
 ////Project Specific Classes////
 
 body{
-  padding-top: 75px; //for fixed header
+  padding-top: 74px; //for fixed header
   &.overflow-stop{
     overflow: hidden;
   }
@@ -301,7 +326,7 @@ body{
   z-index: 999;
   a.header-logo-link{
     left: 1.5vw;
-    top: 2.5vh;
+    top: 2.4vh;
   }
   ul.header-menu-list{
     justify-content: center;
@@ -400,11 +425,11 @@ section#futureOfWork{
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        margin-left: 24px;
         .work-icon--title{
           top: -3.5vw;
           width: 200px;
           background: rgba(0,0,0,0.07);
-          left: -5.1vw;
           box-sizing: border-box;
           font-size: 12px;
           transition: all 0.3s ease;
@@ -416,7 +441,7 @@ section#futureOfWork{
             content: "";
             position: absolute;
             bottom: -2.2vw;
-            left: 6vw;
+            left: 5.6vw;
             border: 16px;
             border-style: solid;
             border-color: transparent;
@@ -433,6 +458,7 @@ section#futureOfWork{
           transition: 0.3s ease;
         }
         &#HomeIcon{
+          color: #9c0;
           .work-icon--img {
             background: url("../images/scale-icons/grey/home.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -442,6 +468,7 @@ section#futureOfWork{
           }
         }
         &#MainStageIcon{
+          color: #18a7e0;
           .work-icon--img {
             background: url("../images/scale-icons/grey/mainstage.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -451,6 +478,7 @@ section#futureOfWork{
           }
         }
         &#HRIcon{
+          color: #bb6e3d;
           .work-icon--img {
             background: url("../images/scale-icons/grey/hrtech.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -460,6 +488,7 @@ section#futureOfWork{
           }
         }
         &#TalentIcon{
+          color: #57b1b8;
           .work-icon--img {
             background: url("../images/scale-icons/grey/irecruitandtalent.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -469,6 +498,7 @@ section#futureOfWork{
           }
         }
         &#SmartDataIcon{
+          color: #8a5ea4;
           .work-icon--img {
             background: url("../images/scale-icons/grey/smartdata.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -478,6 +508,7 @@ section#futureOfWork{
           }
         }
         &#LearningIcon{
+          color: #00a29a;
           .work-icon--img {
             background: url("../images/scale-icons/grey/learning.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -487,6 +518,7 @@ section#futureOfWork{
           }
         }
         &#AdoptionIcon{
+          color: #81b041;
           .work-icon--img {
             background: url("../images/scale-icons/grey/adoption.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -496,6 +528,7 @@ section#futureOfWork{
           }
         }
         &#PayrollIcon{
+          color: #809453;
           .work-icon--img {
             background: url("../images/scale-icons/grey/hrssandpayroll.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -505,6 +538,7 @@ section#futureOfWork{
           }
         }
         &#RewardsIcon{
+          color: #a92a31;
           .work-icon--img {
             background: url("../images/scale-icons/grey/payandrewards.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -514,6 +548,7 @@ section#futureOfWork{
           }
         }
         &#DigitalIcon{
+          color: #ee2a7b;
           .work-icon--img {
             background: url("../images/scale-icons/grey/digitalhr.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -523,6 +558,7 @@ section#futureOfWork{
           }
         }
         &#DiversityIcon{
+          color: #3b8954;
           .work-icon--img {
             background: url("../images/scale-icons/grey/diversityandinclusion.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -532,6 +568,7 @@ section#futureOfWork{
           }
         }
         &#ThinkIcon{
+          color: #3f80c2;
           .work-icon--img {
             background: url("../images/scale-icons/grey/thinktank.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -541,6 +578,7 @@ section#futureOfWork{
           }
         }
         &#ThinkIconII{
+          color: #3f80c2;
           .work-icon--img {
             background: url("../images/scale-icons/grey/thinktanktwo.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -550,6 +588,7 @@ section#futureOfWork{
           }
         }
         &#disruptIcon{
+          color: #cca82e;
           .work-icon--img {
             background: url("../images/scale-icons/grey/disrupthr.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -559,6 +598,7 @@ section#futureOfWork{
           }
         }
         &#ProductIcon{
+          color: #e41a52;
           .work-icon--img {
             background: url("../images/scale-icons/grey/productdemo.svg") center center no-repeat;
             &.hovered, &:hover{
@@ -573,7 +613,7 @@ section#futureOfWork{
             content: "";
             position: absolute;
             bottom: -2.2vw;
-            left: 6vw;
+            left: 5.6vw;
             border: 16px;
             border-style: solid;
             border-color: transparent;
@@ -582,6 +622,9 @@ section#futureOfWork{
             width: 0;
             background: transparent;
           }
+        }
+        &:first-child{
+          margin-left: 0;
         }
       }
     }
@@ -594,7 +637,7 @@ section#futureOfWork{
         font-weight: 700;
       }
       p#sectionDesc{
-        font-size: 1vw;
+        font-size: 14px;
         font-weight: 300;
         letter-spacing: 1px;
         line-height: 1.6vw;
@@ -602,7 +645,7 @@ section#futureOfWork{
     }
     #sectionButtons{
       max-width: 60%;
-      justify-content: space-between;
+      justify-content: center;
     }
   }
 }//section Future of Work END
@@ -671,12 +714,19 @@ section#peopleAttending{
           .know-more-form-wrapper{
             max-width: 64%;
             form.know-more-form{
-              justify-content: space-between;
+              justify-content: center;
               input[type="text"] {
                 width: 200px;
                 padding: 4px 10px;
                 font-size: 14px;
                 outline: none;
+                margin-left: 24px;
+                &:first-child{
+                  margin-left: 0;
+                }
+              }
+              button{
+                margin-left: 24px;
               }
             }
           }
@@ -692,22 +742,27 @@ section#peopleAttending{
   }
 }
 
-//FOR TABLETS//
+//FOR 1024px//
 @media screen and (max-width: 1279px) {
 
   //hamburger-menu button
   #fixedHeader{
     justify-content: flex-end;
+    a.header-logo-link{
+      left: 2.6vw;
+      top: 2.9vh;
+    }
   }
   #hamburgerBtn{
     display: block;
-    width: 40px;
+    width: 36px;
     cursor: pointer;
+    margin-right: 8px;
     .bar{
       height: 4px;
       width: 100%;
       background: $white;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       position: relative;
       transition: transform 0.3s ease;
       -webkit-tap-highlight-color: rgba(255,255,255,0);
@@ -722,7 +777,7 @@ section#peopleAttending{
       }
       &:last-child{
         display: block;
-        transform: translateY(-4px) rotate(-135deg);
+        transform: translateY(-2px) rotate(-135deg);
       }
     }
   }
@@ -776,6 +831,92 @@ section#peopleAttending{
         align-self: center;
         div.menu-back{
           color: lighten($black, 50);
+        }
+      }
+    }
+  }
+  section#futureOfWork{
+    div.section-second{
+      max-width: 100%;
+      #iconInfo {
+        p#sectionDesc {
+          line-height: 2.4vw;
+        }
+      }
+    }
+  }
+  section#peopleAttending {
+    .section-wrapper {
+        #firstSection {
+          max-width: 100%;
+          .section-first-desc {
+            line-height: 2vw;
+          }
+        }
+      #secondSection {
+        #attendeesList {
+          div.speaker {
+            flex: 0 1 17.2vw;
+            div.person-description {
+              font-size: 1vw;
+              .person-title {
+                font-size: 1.24vw;
+              }
+            }
+          }
+        }
+        #secondSectionFooter {
+          .section-footer-title{
+            font-size: 24px;
+          }
+          .section-footer-desc{
+            max-width: 100%;
+            line-height: 2vw;
+          }
+          .know-more-section {
+            .know-more-form-wrapper {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//FOR TABLETS//
+@media screen and (max-width: 959px){
+  #fixedHeader{
+    a.header-logo-link {
+      left: 3vw;
+      top:3.4vh;
+      #headerLogo {
+        img {
+          width: 220px;
+        }
+      }
+    }
+  }
+  header#headerBanner{
+    background: url(../images/header-bg-tablet.jpg) center top no-repeat;
+    background-size: cover;
+    height: 100vh;
+    #headerElements {
+      .header-top-banner {
+        bottom: -15vw;
+        span{
+          font-size: 2.8vw;
+          &#The{
+            bottom: -3.4vw;
+            left: -6.6vw;
+          }
+          &#Greatest{
+            font-size: 7.5vw;
+          }
+          &#hrShows{
+            top: -1.9vw;
+            right: -3.2vw;
+          }
         }
       }
     }
