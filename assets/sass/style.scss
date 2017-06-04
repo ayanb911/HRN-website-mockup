@@ -11,11 +11,13 @@ $black: #000;
 
 //Mixins
 
-//Function for returning the multiplied value
-@function  multiply($val1, $val2){
+//Function for returning exponent of 2
+@function exponent($val1, $val2, $expNumber){
   $exp: 1;
-  @for $i from 1 through $val2{
-    $exp: $exp * 2;
+  @if $val2>0 {
+    @for $i from 1 through $val2 {
+      $exp: $exp * $expNumber;
+    }
   }
   @return ($val1*$exp)+px;
 }
@@ -23,12 +25,11 @@ $black: #000;
 //Generate Margin Classes
 @mixin marginClasses{
   $directions: ("r": right, "l": left, "b": bottom, "t": top);
-  $level: 5; //no
-  $counter: 1;
+  $level: 5; //number of levels
   @each $dir, $d in $directions{
     @for $i from 1 through $level{
       .layout-m-#{$dir}--#{$i}{
-        margin-#{$d}: multiply(4,$i);
+        margin-#{$d}: exponent(4,$i,2);
       }
     }
   }
@@ -37,11 +38,10 @@ $black: #000;
 @mixin paddingClasses{
   $directions: ("r": right, "l": left, "b": bottom, "t": top);
   $level: 5;
-  $counter: 1;
   @each $dir, $d in $directions{
     @for $i from 1 through $level{
       .layout-p-#{$dir}--#{$i}{
-        padding-#{$d}: multiply(4,$i);
+        padding-#{$d}: exponent(4,$i,2);
       }
     }
   }
@@ -641,6 +641,34 @@ section#peopleAttending{
         div.speaker{
           flex: 0 1 13.8vw;
           margin-bottom: 4px;
+          transition: 0.3s ease;
+          overflow: hidden;
+          #infoDiv{
+            top:0;
+            height: 100%;
+            width: 100%;
+            //flex: 0 1 13.8vw;
+            background: $accent-color;
+            color: $text-color;
+            padding: 8px;
+            text-align: left;
+            #hoverName{
+              font-size: 16px;
+              font-weight: 400;
+              margin-bottom: 4px;
+            }
+            #hoverPosition, #hoverCompany{
+              font-size: 12px;
+              font-weight: 300;
+              margin:2px 0;
+            }
+            #hoverAbout{
+              font-size: 10px;
+            }
+            &.showingInfo{
+              left: 0 !important;
+            }
+          }
           .speaker-img{
 
           }

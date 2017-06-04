@@ -2,6 +2,7 @@ $(document).ready(function () {
     autoIconScale(); //Icon animation - Future of Work
     menuAnimate(); //animations in nav menuu
     menuMore();//nav menu for mobile more click
+    hoveringDiv();
 })
 
 //Icon animation - Future of Work
@@ -77,6 +78,43 @@ function menuAnimate(){
 
 
 //Attendees animation
+
+//Hovering Div
+function hoveringDiv(){
+    var parent = $(".speaker[data-about]"),
+        infoDiv = "",
+        $bdy = $("body");
+    console.log(parent);
+    if (parent.attr("data-about").length = 1){
+        var speakerName = parent.find(".person-description .person-title").text(),
+            speakerPosition = parent.find(".person-description .person-position").text(),
+            speakerCompany = parent.find(".person-description .person-company").text(),
+            speakerAbout = parent.attr("data-about");
+        infoDiv =
+            "<div id='infoDiv' class='hidden--lt-sm pos-absolute showingInfo'>" +
+                "<h3 id='hoverName'>"+speakerName+"</h3>" +
+                "<p id='hoverPosition'>"+speakerPosition+"</p>" +
+                "<p id='hoverCompany'>"+speakerCompany+"</p>" +
+                "<p id='hoverAbout' class='layout-m-t--2'>"+speakerAbout+"</p>" +
+            "</div>";
+        parent.hover(function () {
+            $(this).find(".person-description").after(infoDiv);
+            $('#infoDiv').css("left","-200px");
+        }, function () {
+            $(this).find("#infoDiv").remove();
+        });
+
+        console.log(infoDiv);
+    }
+    /*switch(slideDirection){
+        case 'top':
+            if(parent.is(":hover")){
+
+            }
+    }*/
+}
+
+// More button
 $("#seeMore").click(function () {
     $('#attendeesList').toggleClass("isExpanded");
 })
