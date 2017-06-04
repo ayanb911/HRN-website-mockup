@@ -360,6 +360,7 @@ header#headerBanner{
       span{
         font-size: 2.1vw;
         position: relative;
+        text-shadow: 0 0 10px #000;
         &#The{
           bottom: -2.5vw;
           left: -5.4vw;
@@ -758,6 +759,7 @@ section#peopleAttending{
     width: 36px;
     cursor: pointer;
     margin-right: 8px;
+    -webkit-tap-highlight-color: rgba(255,255,255,0.1);
     .bar{
       height: 4px;
       width: 100%;
@@ -765,7 +767,6 @@ section#peopleAttending{
       margin-bottom: 6px;
       position: relative;
       transition: transform 0.3s ease;
-      -webkit-tap-highlight-color: rgba(255,255,255,0);
       outline: none;
 
     }
@@ -989,4 +990,104 @@ section#peopleAttending{
       }
     }
   }
+}
+
+//FOR MOBILES
+@media screen and (max-width: 480px){
+  .flex-column--mobile{
+    flex-direction: column !important;
+  }
+  header#headerBanner{
+    background: url(../images/header-bg-mobile.jpg) center top no-repeat;
+    background-size: cover;
+    height: 160vh;
+    #headerElements {
+      .header-top-banner {
+        bottom: -24vw;
+        left: -3vw;
+        span{
+          font-size: 4.3vw;
+          &#The{
+            bottom: -6.4vw;
+            left: -10.8vw;
+          }
+          &#Greatest{
+            font-size: 12vw;
+          }
+          &#hrShows{
+            top: -2.6vw;
+            right: -4.5vw;
+          }
+        }
+      }
+      .header-bottom-banner {
+        position: relative;
+        padding: 0 24px;
+        .headerBottomTitle{
+          font-size: 28px;
+        }
+        .header-buttons{
+          align-items: center;
+          padding: 16px 0;
+          button{
+            margin: 0 0 16px 0;
+            max-width: 200px;
+            &:last-child{
+              margin: 0;
+            }
+          }
+        }
+        #headerSponsors{
+          .feature-keynote-wrapper{
+            position: absolute;
+            .keynote-title{
+              font-size: 3.7vw;
+              font-weight: 300;
+            }
+            .keynote-person{
+              font-size: 4.7vw;
+              letter-spacing: 1px;
+            }
+            &#keynoteBrady{
+              top: -20vw;
+              left: 4vw;
+              text-align: left;
+            }
+            &#keynoteRobinson{
+              top: -20vw;
+              right: 4vw;
+              text-align: right;
+            }
+          }
+          #sponsorList {
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 80%;
+            a{
+              min-width: 50%;
+            }
+            img {
+              height: 8vw;
+              margin-right: 2vw;
+              margin-top: 4vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  section#futureOfWork {
+    div.section-second{
+      margin-top: 32px;
+      #iconInfo {
+        #sectionTitle{
+          font-size: 24px;
+        }
+        #sectionDesc{
+          line-height: 2.4vw;
+        }
+      }
+    }
+  }
+
 }
