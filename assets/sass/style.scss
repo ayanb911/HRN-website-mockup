@@ -1164,3 +1164,16 @@ section#peopleAttending{
     }
   }
 }
+
+//for mobiles smaller than  375px
+@media screen and (max-width: 375px){
+  section#peopleAttending {
+    .section-wrapper {
+      #secondSection {
+        #secondSectionFooter{
+          margin: 0 -48px;
+        }
+      }
+    }
+  }
+}
