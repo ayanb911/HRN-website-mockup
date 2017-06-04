@@ -1167,6 +1167,9 @@ section#peopleAttending{
 
 //for mobiles smaller than  375px
 @media screen and (max-width: 375px){
+  header#headerBanner{
+    height: 146vh;
+  }
   section#peopleAttending {
     .section-wrapper {
       #secondSection {
@@ -1175,5 +1178,11 @@ section#peopleAttending{
         }
       }
     }
+  }
+}
+
+@media screen and(max-width: 320px){
+  header#headerBanner{
+    height: 130vh;
   }
 }
