@@ -393,7 +393,7 @@ section#futureOfWork{
         cursor: pointer;
         margin-left: 24px;
         .work-icon--title{
-          top: -3.5vw;
+          top: -54px;
           width: 200px;
           background: rgba(0,0,0,0.07);
           box-sizing: border-box;
@@ -403,11 +403,11 @@ section#futureOfWork{
         }
         .work-icon--title.show{
           transform: translate3d(0,0,0) scale3d(1,1,1);
-          &:after{
+          &>div:after{
             content: "";
             position: absolute;
-            bottom: -2.2vw;
-            left: 5.6vw;
+            top: 22px;
+            left: 42%;
             border: 16px;
             border-style: solid;
             border-color: transparent;
@@ -575,11 +575,11 @@ section#futureOfWork{
         }
         &:hover > .work-icon--title{
           transform: translate3d(0,0,0) scale3d(1,1,1);
-          &:after{
+          &>div:after{
             content: "";
             position: absolute;
-            bottom: -2.2vw;
-            left: 5.6vw;
+            top: 22px;
+            left: 42%;
             border: 16px;
             border-style: solid;
             border-color: transparent;
@@ -778,6 +778,11 @@ section#peopleAttending{
       div#iconsContainer{
         width: 50vw;
         margin: 0 auto;
+        .work-icon{
+          .work-icon--title{
+            top: -30px;
+          }
+        }
       }
     }
     div.section-second {
@@ -818,11 +823,6 @@ section#peopleAttending{
   }
 }
 
-@media screen and (max-width: 959px){
-  #sectionFirstPart{
-    display: none;
-  }
-}
 
 //FOR 1024px screens//
 @media screen and (max-width: 1279px) {
@@ -918,6 +918,15 @@ section#peopleAttending{
     }
   }
   section#futureOfWork{
+    div.section-first {
+      div#iconsContainer {
+        .work-icon{
+          .work-icon--title{
+            top: -56px;
+          }
+        }
+      }
+    }
     div.section-second{
       max-width: 100%;
       #iconInfo {
@@ -968,6 +977,10 @@ section#peopleAttending{
 
 //FOR TABLETS//
 @media screen and (max-width: 959px){
+  #sectionFirstPart{
+    display: none; //icon animation in future of work
+  }
+
   #fixedHeader{
     a.header-logo-link {
       left: 3vw;
