@@ -47,6 +47,43 @@ $black: #000;
   }
 }
 
+//Glitch effect for logo
+@mixin logoGlitch($animationName, $effect, $imgWidth, $imgHeight, $imgLeft, $imgTop) {
+
+  $steps: $effect;
+
+  @at-root { //generate at root level
+    // Two animations
+    @for $i from 1 through 2 {
+      @keyframes #{$animationName}-anim-#{$i} {
+        @for $i from 0 through $steps {
+          #{percentage($i*(1/$steps))} {
+            //clip the image
+            clip: rect(random($imgHeight)+px, $imgWidth+px, random($imgHeight)+px,0);
+          }
+        }
+      }
+    }
+  }
+  >img{
+    position: absolute;
+    top: $imgTop + px;
+    left: $imgLeft + px;
+  }
+  > img:nth-child(2),
+  > img:nth-child(3){
+    clip: rect(0, 0, 0, 0);
+  }
+  > img:nth-child(2) {
+    left: ($imgLeft + 2) + px;
+    animation: #{$animationName}-anim-1 2s infinite linear alternate-reverse;
+  }
+  > img:nth-child(3) {
+    left: ($imgLeft - 2) + px;
+    animation: #{$animationName}-anim-2 3s infinite linear alternate-reverse;
+  }
+}
+
 ////Most Used Classes////
 
 //Display Classes
@@ -248,6 +285,14 @@ body{
   a.header-logo-link{
     left: 1.5vw;
     top: 2.4vh;
+    z-index: 9999;
+    div#headerLogo:hover{
+      img{
+        top: 0;
+        left: 0;
+      }
+      @include logoGlitch("glitch", 15, 240, 42, 0, 0);
+    }
   }
   ul.header-menu-list{
     justify-content: center;
