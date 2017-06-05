@@ -3,7 +3,7 @@
 
 
 //Variables//
-$primary-color: #000; // primary color black
+$primary-color: #000; //primary color black
 $accent-color: #99cc00; //accent color green
 $text-color: #fff;
 $white: #fff;
@@ -11,7 +11,7 @@ $black: #000;
 
 //Mixins//
 
-//Function for returning exponent of 2
+//Function for returning exponent of a number
 @function exponent($val1, $val2, $expNumber){
   $exp: 1;
   @if $val2>0 {
@@ -24,7 +24,7 @@ $black: #000;
 
 //Generate Margin Classes
 @mixin marginClasses{
-  $directions: ("r": right, "l": left, "b": bottom, "t": top);
+  $directions: ("r": right, "l": left, "b": bottom, "t": top); //array for building classes
   $level: 5; //number of levels
   @each $dir, $d in $directions{
     @for $i from 1 through $level{
@@ -65,6 +65,7 @@ $black: #000;
       }
     }
   }
+  //style image inside div
   >img{
     position: absolute;
     top: $imgTop + px;
@@ -75,10 +76,12 @@ $black: #000;
     clip: rect(0, 0, 0, 0);
   }
   > img:nth-child(2) {
+    //push 2nd image to right
     left: ($imgLeft + 2) + px;
     animation: #{$animationName}-anim-1 2s infinite linear alternate-reverse;
   }
   > img:nth-child(3) {
+    //push 3rd image to left
     left: ($imgLeft - 2) + px;
     animation: #{$animationName}-anim-2 3s infinite linear alternate-reverse;
   }
@@ -243,7 +246,7 @@ $black: #000;
     color: $accent-color;
     background: $white;
   }
-  &.btn-back-transparent:hover{
+  &.btn-back-transparent:hover{ //alternate button hover
     background: transparent;
     color: $accent-color;
   }
@@ -270,7 +273,7 @@ body{
   &.overflow-stop{
     overflow: hidden;
   }
-  padding-top: 74px;
+  padding-top: 74px; //for fixed header
 }
 
 .fixed-header{//fixed-header
