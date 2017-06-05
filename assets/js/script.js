@@ -1,8 +1,11 @@
 $(document).ready(function () {
     autoIconScale(); //Icon animation - Future of Work
-    menuAnimate(); //animations in nav menuu
+
+    menuAnimate(); //animations in nav menu
+
     menuMore();//nav menu for mobile more click
-    hoveringDiv();
+
+    hoveringDiv();//speaker hover div
 })
 
 //Icon animation - Future of Work
@@ -23,6 +26,7 @@ function autoIconScale(){
         }, 1000*i);
 
        workIcon.hover(function () {
+           //on hover stop timeout
            clearTimeout(timer);
            workIconEach.find("div.work-icon--title").removeClass("show");
            workIconEach.find("div.work-icon--img").removeClass("hovered");
@@ -40,10 +44,11 @@ function autoIconScale(){
 //Menu More button
 function menuMore(){
     $("#menuMore").click(function () {
-        //toggle class for translating ul menu
+        //toggle class for translating height of ul menu
         $(this).parent().closest("#menuWrapper").toggleClass("expand");
     })
 }
+
 //Menu slide effect and cross button
 function menuAnimate(){
 
@@ -57,8 +62,8 @@ function menuAnimate(){
         $ham.toggleClass("isCross");//turn ham into cross and back
         $bdy.toggleClass("overflow-stop");//stop scroll when body is open
 
-        //toggle class to make it cross and for menu to slide in
-        click = !click;
+        click = !click; //reverse present value of click
+
         if(click){
             $ham.parent().find("#mobileMenu").addClass("isOpen");
             $menuItem.each(function (i) {
@@ -83,48 +88,22 @@ function menuAnimate(){
 }
 
 
-//Attendees animation
+//// Attendees animation
 
 //Hovering Div
 function hoveringDiv(){
-    // var speakers = $(".speaker[data-about]"),
-    //     infoDiv = "",
-    //     $bdy = $("body");
-    // console.log(speakers);
-    // speakers.each(function () {
-    //     var speaker = $(this);
-    //     console.log(speaker);
-    //     var speakerName = speaker.find(".person-description .person-title").text(),
-    //         speakerPosition = speaker.find(".person-description .person-position").text(),
-    //         speakerCompany = speaker.find(".person-description .person-company").text(),
-    //         speakerAbout = speaker.attr("data-about");
-    //     infoDiv =
-    //         "<div id='infoDiv' class='hidden--lt-sm pos-absolute showingInfo'>" +
-    //         "<h3 id='hoverName'>"+speakerName+"</h3>" +
-    //         "<p id='hoverPosition'>"+speakerPosition+"</p>" +
-    //         "<p id='hoverCompany'>"+speakerCompany+"</p>" +
-    //         "<p id='hoverAbout' class='layout-m-t--2'>"+speakerAbout+"</p>" +
-    //         "</div>";
-    //     speaker.hover(function () {
-    //         speaker.find(".person-description").after(infoDiv);
-    //         $('#infoDiv').css("left","-200px");
-    //     }, function () {
-    //         speaker.find("#infoDiv").remove();
-    //     });
-    //
-    //     console.log(infoDiv);
-    // });
-    var speakers = $(".speaker[data-about]"),
-        infoDiv = "";
+    var speakers = $(".speaker[data-about]"), //get all divs with "data-about" attribute
+        infoDiv = ""; //for creating div
     speakers.each(function () {
-        var speaker = $(this);
+        var speaker = $(this); //each speaker
         speaker.hover(function () {
-
+            // get data for infoDiv
             var speakerName = speaker.find(".person-description .person-title").text(),
                 speakerPosition = speaker.find(".person-description .person-position").text(),
                 speakerCompany = speaker.find(".person-description .person-company").text(),
                 speakerAbout = speaker.attr("data-about");
 
+            // create infoDiv
             infoDiv =
                 "<div id='infoDiv' class='hidden--lt-sm pos-absolute showingInfo'>" +
                 "<h3 id='hoverName'>"+speakerName+"</h3>" +
@@ -133,16 +112,18 @@ function hoveringDiv(){
                 "<p id='hoverAbout' class='layout-m-t--2'>"+speakerAbout+"</p>" +
                 "</div>";
 
+            // append infoDiv
             speaker.find(".person-description").after(infoDiv);
             $('#infoDiv').addClass("showingInfo");
 
         }, function () {
+            // on hover out remove infoDiv
             speaker.find("#infoDiv").remove();
         });
     })
 }
 
-// More button
+// More button for expanding grid on mobile/tablets
 $("#seeMore").click(function () {
     $('#attendeesList').toggleClass("isExpanded");
 })
