@@ -1,10 +1,10 @@
 //Imports//
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900'); // import Playfair display font
 
 
 //Variables//
-$primary-color: #000;
-$accent-color: #99cc00;
+$primary-color: #000; // primary color black
+$accent-color: #99cc00; //accent color green
 $text-color: #fff;
 $white: #fff;
 $black: #000;
@@ -861,6 +861,17 @@ section#peopleAttending{ //section containing speaker grid and form
                 &.person-title{
                   font-size: 1vw;
                 }
+              }
+            }
+            #infoDiv {
+              #hoverName{
+                font-size: 1vw;
+              }
+              #hoverPosition, #hoverCompany{
+                font-size: 0.8vw;
+              }
+              #hoverAbout{
+                font-size: 0.87vw;
               }
             }
           }
