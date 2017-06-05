@@ -940,8 +940,10 @@ section#peopleAttending{
             position: relative;
             will-change: left;
             transition: 0.2s ease;
-            &:first-child, &:hover, &:focus {
-              color: $accent-color;
+            a {
+              &:hover, &:focus {
+                color: $accent-color;
+              }
             }
             &.isEntering{
               left: 0 !important;
