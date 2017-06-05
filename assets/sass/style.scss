@@ -688,6 +688,18 @@ section#peopleAttending{
             }
           }
         }
+        &:after{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 4px;
+          width: 100%;
+          background: $black;
+          @media screen and (min-width: 1024px){
+            //only show after on screens above 1024px
+            content: '';
+          }
+        }
       }
       #secondSectionFooter{
         .section-footer-title{
