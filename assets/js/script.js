@@ -87,31 +87,59 @@ function menuAnimate(){
 
 //Hovering Div
 function hoveringDiv(){
-    var parent = $(".speaker[data-about]"),
-        infoDiv = "",
-        $bdy = $("body");
-    console.log(parent);
-    if (parent.attr("data-about").length = 1){
-        var speakerName = parent.find(".person-description .person-title").text(),
-            speakerPosition = parent.find(".person-description .person-position").text(),
-            speakerCompany = parent.find(".person-description .person-company").text(),
-            speakerAbout = parent.attr("data-about");
-        infoDiv =
-            "<div id='infoDiv' class='hidden--lt-sm pos-absolute showingInfo'>" +
+    // var speakers = $(".speaker[data-about]"),
+    //     infoDiv = "",
+    //     $bdy = $("body");
+    // console.log(speakers);
+    // speakers.each(function () {
+    //     var speaker = $(this);
+    //     console.log(speaker);
+    //     var speakerName = speaker.find(".person-description .person-title").text(),
+    //         speakerPosition = speaker.find(".person-description .person-position").text(),
+    //         speakerCompany = speaker.find(".person-description .person-company").text(),
+    //         speakerAbout = speaker.attr("data-about");
+    //     infoDiv =
+    //         "<div id='infoDiv' class='hidden--lt-sm pos-absolute showingInfo'>" +
+    //         "<h3 id='hoverName'>"+speakerName+"</h3>" +
+    //         "<p id='hoverPosition'>"+speakerPosition+"</p>" +
+    //         "<p id='hoverCompany'>"+speakerCompany+"</p>" +
+    //         "<p id='hoverAbout' class='layout-m-t--2'>"+speakerAbout+"</p>" +
+    //         "</div>";
+    //     speaker.hover(function () {
+    //         speaker.find(".person-description").after(infoDiv);
+    //         $('#infoDiv').css("left","-200px");
+    //     }, function () {
+    //         speaker.find("#infoDiv").remove();
+    //     });
+    //
+    //     console.log(infoDiv);
+    // });
+    var speakers = $(".speaker[data-about]"),
+        infoDiv = "";
+    speakers.each(function () {
+        var speaker = $(this);
+        speaker.hover(function () {
+
+            var speakerName = speaker.find(".person-description .person-title").text(),
+                speakerPosition = speaker.find(".person-description .person-position").text(),
+                speakerCompany = speaker.find(".person-description .person-company").text(),
+                speakerAbout = speaker.attr("data-about");
+
+            infoDiv =
+                "<div id='infoDiv' class='hidden--lt-sm pos-absolute showingInfo'>" +
                 "<h3 id='hoverName'>"+speakerName+"</h3>" +
                 "<p id='hoverPosition'>"+speakerPosition+"</p>" +
                 "<p id='hoverCompany'>"+speakerCompany+"</p>" +
                 "<p id='hoverAbout' class='layout-m-t--2'>"+speakerAbout+"</p>" +
-            "</div>";
-        parent.hover(function () {
-            $(this).find(".person-description").after(infoDiv);
-            $('#infoDiv').css("left","-200px");
-        }, function () {
-            $(this).find("#infoDiv").remove();
-        });
+                "</div>";
 
-        console.log(infoDiv);
-    }
+            speaker.find(".person-description").after(infoDiv);
+            $('#infoDiv').addClass("showingInfo");
+
+        }, function () {
+            speaker.find("#infoDiv").remove();
+        });
+    })
 }
 
 // More button

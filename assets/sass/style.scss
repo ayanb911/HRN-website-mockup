@@ -641,12 +641,13 @@ section#peopleAttending{
         div.speaker{
           flex: 0 1 13.8vw;
           margin-bottom: 4px;
-          transition: 0.3s ease;
           overflow: hidden;
           #infoDiv{
             top:0;
+            opacity:0;
             height: 100%;
             width: 100%;
+            transition: opacity 0.3s ease;
             //flex: 0 1 13.8vw;
             background: $accent-color;
             color: $text-color;
@@ -667,6 +668,7 @@ section#peopleAttending{
             }
             &.showingInfo{
               left: 0 !important;
+              opacity: 1;
             }
           }
           .speaker-img{
