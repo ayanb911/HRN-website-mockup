@@ -12,7 +12,7 @@ function autoIconScale(){
         var workIconEach = $(this),
             notThis = $(".work-icon").not(workIconEach);
 
-        setTimeout(function () {
+       var timer =  setTimeout(function () {
             //add classes to 'this'
             workIconEach.find("div.work-icon--title").addClass("show");
             workIconEach.find("div.work-icon--img").addClass("hovered");
@@ -22,7 +22,13 @@ function autoIconScale(){
             notThis.find("div.work-icon--img").removeClass("hovered");
         }, 1000*i);
 
+       workIcon.hover(function () {
+           clearTimeout(timer);
+           workIconEach.find("div.work-icon--title").removeClass("show");
+           workIconEach.find("div.work-icon--img").removeClass("hovered");
+       }, '');
     });
+
     setTimeout(function () { //restart the function after completion of first setTimeout
         autoIconScale();
     }, 1000 * workIcon.length-1);
@@ -106,12 +112,6 @@ function hoveringDiv(){
 
         console.log(infoDiv);
     }
-    /*switch(slideDirection){
-        case 'top':
-            if(parent.is(":hover")){
-
-            }
-    }*/
 }
 
 // More button
