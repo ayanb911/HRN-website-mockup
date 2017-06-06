@@ -28,9 +28,18 @@ function autoIconScale(){
         workIcon.hover(function () {
             //on hover stop timeout
             clearTimeout(timer);
+
+            //remove class from other icons
+
             workIconEach.find("div.work-icon--title").removeClass("show");
             workIconEach.find("div.work-icon--img").removeClass("hovered");
-        }, '');
+
+            //add class to the icon hovered upon
+            $(this).find("div.work-icon--img").addClass("hovered")
+        }, function () {
+            //remove class on hover out
+            $(this).find("div.work-icon--img").removeClass("hovered");
+        });
     });
 
     setTimeout(function () { //restart the function after completion of first setTimeout
