@@ -114,20 +114,22 @@ function hoveringDiv(){
 
             // create infoDiv
             infoDiv =
-                "<div id='infoDiv' class='hidden--lt-sm pos-absolute showingInfo'>" +
+                "<div id='infoDiv' class='hidden--lt-sm pos-absolute'>" +
                 "<h3 id='hoverName'>"+speakerName+"</h3>" +
                 "<p id='hoverPosition'>"+speakerPosition+"</p>" +
                 "<p id='hoverCompany'>"+speakerCompany+"</p>" +
                 "<p id='hoverAbout' class='layout-m-t--2'>"+speakerAbout+"</p>" +
                 "</div>";
 
-            // append infoDiv
-            speaker.find(".person-description").after(infoDiv);
-            $('#infoDiv').addClass("showingInfo");
+
+            //add class and append infoDiv
+            speaker.addClass("is-showing-info").append(infoDiv);
+            $("#infoDiv").fadeIn();
+            console.log($(".speaker #infoDiv"));
 
         }, function () {
-            // on hover out remove infoDiv
-            speaker.find("#infoDiv").remove();
+            // on hover out remove class and infoDiv
+            speaker.removeClass("is-showing-info").find("#infoDiv").hide("slow").remove();
         });
     })
 }

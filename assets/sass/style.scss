@@ -703,11 +703,12 @@ section#peopleAttending{ //section containing speaker grid and form
             opacity:0;
             height: 100%;
             width: 100%;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
             background: $accent-color;
             color: $text-color;
             padding: 8px;
             text-align: left;
+            left:0;
             #hoverName{
               font-size: 16px;
               font-weight: 400;
@@ -721,9 +722,9 @@ section#peopleAttending{ //section containing speaker grid and form
             #hoverAbout{
               font-size: 10px;
             }
-            &.showingInfo{
-              left: 0 !important;
+            &:hover{
               opacity: 1;
+              cursor: default;
             }
           }//end of hovering div
 
