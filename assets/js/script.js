@@ -3,9 +3,11 @@ $(document).ready(function () {
 
     menuAnimate(); //animations in nav menu
 
-    menuMore();//nav menu for mobile more click
-
     hoveringDiv();//speaker hover div
+    
+    $(window).on("load", function () {
+       gridResize(); //for resizing of speaker grid
+    })
 })
 
 //Icon animation - Future of Work
@@ -124,17 +126,60 @@ function hoveringDiv(){
 
             //add class and append infoDiv
             speaker.addClass("is-showing-info").append(infoDiv);
-            $("#infoDiv").fadeIn();
-            console.log($(".speaker #infoDiv"));
 
         }, function () {
             // on hover out remove class and infoDiv
-            speaker.removeClass("is-showing-info").find("#infoDiv").hide("slow").remove();
+            speaker.removeClass("is-showing-info").find("#infoDiv").remove();
         });
     })
 }
 
-// More button for expanding grid on mobile/tablets
-$("#seeMore").click(function () {
-    $('#attendeesList').toggleClass("isExpanded");
-})
+//Speaker grid resizing functions
+
+//To change width of grid based on screen width
+function gridResize() {
+    var attendeesGrid = $("#attendeesList"),
+        actualHeight = 0, //store actual height of div
+        hiddenHeight = 0, //store height of visible part of div
+        speaker = $(".speaker");
+
+    //for 4*3 grid resize
+    if($(window).innerWidth() <= 768 && $(window).innerWidth() > 480){
+        actualHeight = attendeesGrid.prop('scrollHeight');
+        hiddenHeight =  (((speaker.innerHeight()+4) * 3) - 4);
+        attendeesGrid.css("height", hiddenHeight);
+    }
+
+    //for 2*4 grid resize
+    else if($(window).innerWidth() <= 480) {
+        actualHeight = attendeesGrid.prop('scrollHeight');
+        hiddenHeight = (((speaker.innerHeight() + 4) * 4) - 4);
+        attendeesGrid.css("height", hiddenHeight);
+    }
+
+    //call More button function
+    seeMore(actualHeight, hiddenHeight);
+}
+
+//More button expansion of grid
+function seeMore (actualHeight, hiddenHeight) {
+    var actual = (actualHeight - 4) + "px";
+    var hidden = hiddenHeight + "px";
+
+    var click = false;
+    $("#seeMore").click(function () {
+        click  = !click;
+        if(click){
+            $('#attendeesList').css("height", actual); // expand to actua height
+        }
+        else{
+            $('#attendeesList').css("height", hidden); // decrease to previous grid height
+        }
+    });
+};
+
+
+
+
+
+
