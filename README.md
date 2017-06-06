@@ -8,7 +8,7 @@ You can find all the extra requirements (ex. time spent on project, customized I
 
 Instructions to help you get this project set up and running
 
-### Prerequisites
+## Prerequisites
 
 Things you'd need pre-installed:
 
@@ -16,7 +16,7 @@ Things you'd need pre-installed:
 Node js
 ```
 
-### Get it running
+## Get it running
 
 ```
 Install Gulp via npm
@@ -28,14 +28,15 @@ sass, autoprefixer, browser-sync, uglify, rename, if, cssnano, imagemin
 
 Fire up index.html in a browser. (**The dist folder has minified versions of everything**)
 
-###Working on the project
+## Working on the project
 
-#####NOTE
+**NOTE**
+
 I do not know how to use Adobe Illustrator, hence I was not able to use all images provided in the test file. Exporting to PSD (which I know), resulted in the loss of layers. Hence, I used images that were available in the test site provided. 
 
 I did not ask Mr. Bottyan about this matter, since I had previously mailed him regarding some issues but had not received any reply. 
 
-####Time Taken
+**Time Taken**
 
 I had received the project on 20th May, 2017 (Tuesday), but I could only start working on it properly 2 days later due to some unavoidable circumstances (my commit dates confirm it).
 
@@ -79,7 +80,7 @@ _6th June_
 
 
 
-###Bonus Extra Requirements
+## Bonus Extra Requirements
 ```
 Usage of Git
 ```
@@ -105,7 +106,8 @@ I have tried to keep everything perfect, except some changes -
 4. The body has a padding top equal to the height of the fixed header - this allows the whole header background to be seen.
 
 
-###Comments
+## Comments
+
 Some comments regarding the project: 
 
 I have tried to be replicate all animations that were present in the test site provided, however, I have not been able to achieve the sliding effect when a speaker is hovered upon. If that is cause for me not being selected, I'd appreciate if I could be told how it was done. Thanks.
