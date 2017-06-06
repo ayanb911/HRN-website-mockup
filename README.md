@@ -1,6 +1,6 @@
 # HRN Website mockup
 
-This repository contains a single page mockup of the [HRN](http://hrn.io), made by [Ayan Banerjee](https://www.linkedin.com/in/abanerjee911/).
+This repository contains a single page mockup of [HRN](http://hrn.io), made by [Ayan Banerjee](https://www.linkedin.com/in/abanerjee911/).
 
 You can find all the extra requirements (ex. time spent on project, customized IDE etc.) in the "wWorking on the Project" section of this file.
 
