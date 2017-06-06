@@ -32,7 +32,6 @@ function autoIconScale(){
             clearTimeout(timer);
 
             //remove class from other icons
-
             workIconEach.find("div.work-icon--title").removeClass("show");
             workIconEach.find("div.work-icon--img").removeClass("hovered");
 
@@ -67,6 +66,7 @@ function menuAnimate(){
     var $bdy = $('body'),
         $ham = $("#hamburgerBtn"),
         $menuItem = $("li.menu-item"),
+        speed = 50, //speed of elements animating
         click = false;
 
     $ham.click(function () {
@@ -81,7 +81,7 @@ function menuAnimate(){
                 var menuItemThis = $(this);
                 setTimeout(function () {
                     menuItemThis.addClass("isEntering");
-                }, 50*i);
+                }, speed*i);
             })
         }
         else{
@@ -89,11 +89,11 @@ function menuAnimate(){
                 var menuItemThis = $(this);
                 setTimeout(function () {
                     menuItemThis.removeClass("isEntering");
-                }, 50*i);
-            })
+                }, speed*i);
+            });
             setTimeout(function () {
                 $ham.parent().find("#mobileMenu").removeClass("isOpen");
-            }, 50 * ($menuItem.length-1));
+            }, speed * ($menuItem.length-1));
         }
     })
 }
@@ -138,16 +138,16 @@ function hoveringDiv(){
 
 //To change width of grid based on screen width
 function gridResize() {
-    var attendeesGrid = $("#attendeesList"),
+    var attendeesGrid = $("#attendeesList"), //the grid
         actualHeight = 0, //store actual height of div
         hiddenHeight = 0, //store height of visible part of div
-        speaker = $(".speaker");
+        speaker = $(".speaker"); //each speaker
 
     //for 4*3 grid resize
     if($(window).innerWidth() <= 768 && $(window).innerWidth() > 480){
         actualHeight = attendeesGrid.prop('scrollHeight');
-        hiddenHeight =  (((speaker.innerHeight()+4) * 3) - 4);
-        attendeesGrid.css("height", hiddenHeight);
+        hiddenHeight =  (((speaker.innerHeight()+4) * 3) - 4); //calculate hidden height discarding bottom margin
+        attendeesGrid.css("height", hiddenHeight); //set grid to hidden height initially
     }
 
     //for 2*4 grid resize
@@ -176,10 +176,4 @@ function seeMore (actualHeight, hiddenHeight) {
             $('#attendeesList').css("height", hidden); // decrease to previous grid height
         }
     });
-};
-
-
-
-
-
-
+}
