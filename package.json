@@ -5,9 +5,12 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2"
   },
   "dependencies": {}
 }

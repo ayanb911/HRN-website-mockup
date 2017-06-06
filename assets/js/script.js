@@ -15,7 +15,7 @@ function autoIconScale(){
         var workIconEach = $(this),
             notThis = $(".work-icon").not(workIconEach);
 
-       var timer =  setTimeout(function () {
+        var timer =  setTimeout(function () {
             //add classes to 'this'
             workIconEach.find("div.work-icon--title").addClass("show");
             workIconEach.find("div.work-icon--img").addClass("hovered");
@@ -25,12 +25,12 @@ function autoIconScale(){
             notThis.find("div.work-icon--img").removeClass("hovered");
         }, 1000*i);
 
-       workIcon.hover(function () {
-           //on hover stop timeout
-           clearTimeout(timer);
-           workIconEach.find("div.work-icon--title").removeClass("show");
-           workIconEach.find("div.work-icon--img").removeClass("hovered");
-       }, '');
+        workIcon.hover(function () {
+            //on hover stop timeout
+            clearTimeout(timer);
+            workIconEach.find("div.work-icon--title").removeClass("show");
+            workIconEach.find("div.work-icon--img").removeClass("hovered");
+        }, '');
     });
 
     setTimeout(function () { //restart the function after completion of first setTimeout
@@ -70,7 +70,7 @@ function menuAnimate(){
                 var menuItemThis = $(this);
                 setTimeout(function () {
                     menuItemThis.addClass("isEntering");
-                }, 30*i);
+                }, 50*i);
             })
         }
         else{
@@ -78,11 +78,11 @@ function menuAnimate(){
                 var menuItemThis = $(this);
                 setTimeout(function () {
                     menuItemThis.removeClass("isEntering");
-                }, 30*i);
+                }, 50*i);
             })
             setTimeout(function () {
                 $ham.parent().find("#mobileMenu").removeClass("isOpen");
-            }, 30 * ($menuItem.length-1));
+            }, 50 * ($menuItem.length-1));
         }
     })
 }

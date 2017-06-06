@@ -270,10 +270,10 @@ $black: #000;
 ////Project Specific Classes////
 
 body{
+  padding-top: 74px; //for fixed header
   &.overflow-stop{
     overflow: hidden;
   }
-  padding-top: 74px; //for fixed header
 }
 
 .fixed-header{//fixed-header
