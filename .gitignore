@@ -5,7 +5,7 @@ npm-debug.log
 .idea/*
 
 #CSS files
-assets/css/*
+
 
 #Miscellaneous
 .DS_Store
