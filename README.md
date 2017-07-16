@@ -2,7 +2,7 @@
 
 This repository contains a single page mockup of [HRN](http://hrn.io), made by [Ayan Banerjee](https://www.linkedin.com/in/abanerjee911/).
 
-You can find all the extra requirements (ex. time spent on project, customized IDE etc.) in the "wWorking on the Project" section of this file.
+You can find all the extra requirements (ex. time spent on project, customized IDE etc.) in the "Working on the Project" section of this file.
 
 ## Getting Started
 
@@ -104,10 +104,3 @@ I have tried to keep everything perfect, except some changes -
 3. The Hamburger to cross transition animation is altered because I wanted it to be faster. Same for the entry time of the menu links when the menu links slides in; they are faster.
 
 4. The body has a padding top equal to the height of the fixed header - this allows the whole header background to be seen.
-
-
-## Comments
-
-Some comments regarding the project: 
-
-I have tried to be replicate all animations that were present in the test site provided, however, I have not been able to achieve the sliding effect when a speaker is hovered upon. If that is cause for me not being selected, I'd appreciate if I could be told how it was done. Thanks.
